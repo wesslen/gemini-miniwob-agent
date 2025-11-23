@@ -1,0 +1,26 @@
+# .gitignore
+
+# Security: Never commit the .env file
+.env
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# VSCode settings (optional, but recommended for team repos)
+.vscode/
+
+# MiniWoB specific or Runtime logs
+*.log
+screenshots/
+geckodriver.log
+chromedriver.log
+
+# Mac OS junk
+.DS_Store

@@ -1,0 +1,19 @@
+[project]
+name = "gemini-miniwob-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "arize-phoenix>=12.16.0",
+    "google-genai>=1.52.0",
+    "gymnasium>=0.29.0",
+    "miniwob>=1.0",
+    "numpy>=2.3.5",
+    "openinference-instrumentation-google-genai>=0.1.8",
+    "opentelemetry-instrumentation-google-genai>=0.4b0",
+    "pillow>=12.0.0",
+    "python-dotenv>=1.2.1",
+    "selenium>=4.38.0",
+    "webdriver-manager>=4.0.2",
+]
