@@ -91,6 +91,10 @@ Episode 2/3 | Goal: Click button ONE.
   > SUCCESS!
 ```
 
+You should see the agent interacting with the MiniWoB environment via browser:
+
+![](img/miniwob_example.png)
+
 This will also run Arize Phoenix as you should see `🌍 Phoenix App: http://localhost:6006`
 
 ![](img/phoenix.png)
