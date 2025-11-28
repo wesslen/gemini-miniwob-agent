@@ -65,7 +65,7 @@ This project uses [uv](https://github.com/astral-sh/uv) for dependency managemen
 Before running the agent, start a local MiniWoB++ server to host the tasks:
 
 ```bash
-uv run -m miniwob.server --port 8000
+uv run serve_miniwob.py
 ```
 
 ### Run Phoenix Server
@@ -106,6 +106,33 @@ To modify, change the task name in `main.py`:
 ```python
 # very hard critical reasoning task
 run_eval('miniwob/email-inbox-v1', episodes=3)
+```
+
+### Running on GCP
+
+Open Google Cloud Shell
+
+```bash
+sudo apt-get update
+# Install Xvfb
+sudo apt-get install -y xvfb libxi6
+# Install Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+# Install uv
+curl -LsSf https://astral.sh/us/install.sh | sh
+source $HOME/.local/bin/env
+# Clone repo
+git clone https://www.github.com/wesslen/gemini-miniwob-agent
+cd gemini-miniwob-agent
+uv sync
+```
+
+You should now be able to run the steps above.
+
+The only exception is that for `main.py`, run:
+```bash
+xvfb-run --auto-servrnum --server-args="-screen 0 1280x1024x24" uv run main.py
 ```
 
 ### DOM: Bottleneck and Improvements
